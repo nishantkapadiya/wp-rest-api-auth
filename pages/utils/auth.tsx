@@ -2,12 +2,12 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-const API_URL = 'http://vra.local';
+// const API_URL = 'http://vra.local';
 
 export const generateAndValidateToken = async (username: any, password: any) => {
 	try {
 		// Generate a token
-		const response = await axios.post(`${API_URL}/wp-json/api/v1/token`, {
+		const response = await axios.post(`${process.env.API_URL}/wp-json/api/v1/token`, {
 			username,
 			password,
 		});
@@ -19,7 +19,7 @@ export const generateAndValidateToken = async (username: any, password: any) => 
 			Cookies.set('jwt_token', token);
 
 			// Validate the token
-			const validationResponse = await axios.get(`${API_URL}/wp-json/api/v1/token-validate`, {
+			const validationResponse = await axios.get(`${process.env.API_URL}/wp-json/api/v1/token-validate`, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
