@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import Link from 'next/link';
-import PostList from './components/PostList';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
