@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    API_URL: 'http://vra.local',
-    USERNAME: 'vra',
-    PASSWORD: 'this.admin',
+    API_URL: 'API_URL',
+    USERNAME: 'USERNAME',
+    PASSWORD: 'PASSWORD',
   }
 }
 
