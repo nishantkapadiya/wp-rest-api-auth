@@ -13,8 +13,8 @@ export default function Home() {
 	const [posts, setPosts] = useState([]);
 	const token = Cookies.get('jwt_token');
 	useEffect(() => {
-		const username = 'vra';
-		const password = 'this.admin';
+		const username = process.env.USERNAME;
+		const password = process.env.PASSWORD;
 
 		const generateAndValidate = async () => {
 			try {
